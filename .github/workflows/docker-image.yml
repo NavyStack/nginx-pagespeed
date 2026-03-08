@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Docker Build and Push (Nginx With PageSpeed Module v1.25.3)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           file: 1.24.0.Dockerfile
           context: .
@@ -51,7 +51,7 @@ jobs:
           cache-to: ${{ secrets.BUILD_CACHE_TO }}
 
       - name: Docker Build and Push (Nginx With PageSpeed Module v1.24.0)
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           file: 1.25.3.Dockerfile
           context: .
